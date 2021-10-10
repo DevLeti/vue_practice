@@ -1,27 +1,34 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <h1>Todo List!</h1>
-  </div>
+    <div id="app">
+        <TodoHeader />
+        <TodoTitle />
+        <TodoInput />
+        <TodoController />
+        <TodoList />
+        <TodoFooter />
+    </div>
 </template>
 
 <script>
+import TodoHeader from "./components/TodoHeader.vue";
+import TodoTitle from "./components/TodoTitle.vue";
+import TodoInput from "./components/TodoInput.vue";
+import TodoController from "./components/TodoController.vue";
+import TodoList from "./components/TodoList.vue";
+import TodoFooter from "./components/TodoFooter.vue";
+
 export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+    name: "App",
+    components: {
+        TodoHeader,
+        TodoTitle,
+        TodoInput,
+        TodoController,
+        TodoList,
+        TodoFooter
     }
-  }
 }
 </script>
 
 <style>
-#app{
-    font-family : sans-serif;
-}
-h1 {
-    text-align : center;
-    font-weight : bold;
-}
 </style>
