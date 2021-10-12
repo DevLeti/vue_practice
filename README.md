@@ -2,6 +2,9 @@
 
 > A Vue.js project
 
+# scss 관련 출처
+> src/assets/style의 _mixins.scss와 _reset.scss의 출처는 nana-like님의 [vue-mytodo](https://github.com/nana-like/vue-mytodo/tree/master/src/assets/style)레포입니다!
+
 ## Build Setup
 
 ``` bash

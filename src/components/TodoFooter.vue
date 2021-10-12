@@ -5,5 +5,9 @@
 <script>
 </script>
 
-<style>
+<style lang="scss">
+.footer {
+    @include flexbox;
+    @include ellipsis(3);
+}
 </style>

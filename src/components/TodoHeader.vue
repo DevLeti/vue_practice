@@ -7,5 +7,8 @@
 <script>
 </script>
 
-<style>
+<style lang="scss">
+.header{
+    color: $my-var;
+}
 </style>
