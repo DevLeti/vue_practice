@@ -24,3 +24,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 - [Vue tutorial](https://joshua1988.github.io/web-development/vuejs/vuejs-tutorial-for-beginner/)
 - [Vue single component](https://sigmasabjil.tistory.com/87)
 - [todo list](https://nykim.work/74)
+- [쉽게 다가가는 Vue.js 이야기 (파트 1)](https://code-machina.github.io/2019/08/29/Vue-Story-Part-1.html)

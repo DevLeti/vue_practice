@@ -16,7 +16,25 @@ module.exports = {
           'vue-style-loader',
           'css-loader'
         ],
-      },      {
+      },
+      // {
+      //   test: /\.scss&/,
+      //   use: [
+      //     'vue-style-loader',
+      //     'css-loader',
+      //     {
+      //       loader: "scss-loader",
+      //       options: {
+      //         data: `
+      //           @import "@/assets/style/_mixins.scss";
+      //           @import "@/assets/style/_variables.scss";
+      //           @import "@/assets/style/_reset.scss";
+      //         `
+      //       }
+      //     }
+      //   ],
+      // },
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
