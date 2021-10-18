@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <TodoHeader />
-        <TodoTitle />
+        <TodoTitle v-bind:propsdata="todoItemsLength"/>
         <TodoInput v-on:addItem="addOneItem" />
         <TodoController v-on:clearAll="clearAllItem"/>
         <TodoList
@@ -25,25 +25,32 @@ export default {
     name: "App",
     data() {
         return {
-            todoItems: []
+            todoItems: [],
+            todoItemsLength: localStorage.length
         };
     },
     methods: {
+        refreshItemsLength() {
+            this.todoItemsLength = localStorage.length;
+        },
         addOneItem(todoItem) {
             var value = {
                 item: todoItem,
                 completed: false
             };
-            localStorage.setItem(this.newTodoItem, JSON.stringify(value));
+            localStorage.setItem(todoItem, JSON.stringify(value));
             this.todoItems.push(value);
+            this.refreshItemsLength();
         },
         removeOneItem(todoItem, index) {
             localStorage.removeItem(todoItem.item);
             this.todoItems.splice(index, 1);
+            this.refreshItemsLength();
         },
         toggleOneItem(todoItem) {
             todoItem.completed = !todoItem.completed;
             localStorage.setItem(todoItem.item, JSON.stringify(todoItem));
+            this.refreshItemsLength();
         },
         clearAllItem() {
             this.todoItems = [];

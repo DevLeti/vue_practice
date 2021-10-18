@@ -12,7 +12,9 @@
             <label v-bind:for="todoItem.item" class="list__label">
                 <p class="list__text">{{ todoItem.item }}</p>
             </label>
-            <button class="list__delete" v-on:click="removeTodo(todoItem, index)">Delete</button>
+            <b-button squared variant="info"
+                      class="list__delete" 
+                      v-on:click="removeTodo(todoItem, index)">Delete</b-button>
         </li>
     </ul>
 </template>
@@ -26,7 +28,7 @@ export default {
             localStorage.setItem(todoItem.item, JSON.stringify(todoItem));
         },
         removeTodo(todoItem, index){
-            this.emit("removeItem", todoItem, index);
+            this.$emit("removeItem", todoItem, index);
         },
         toggleComplete(todoItem) {
             this.$emit("toggleItem", todoItem);

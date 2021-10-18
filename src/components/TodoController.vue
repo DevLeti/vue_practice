@@ -9,7 +9,9 @@
             </select>
         </div>
         -->
-        <button class="clear" v-on:click="clearTodo">Clear All</button>
+        <b-button squared size="sm"
+                  class="clear"
+                  v-on:click="clearTodo">Clear All</b-button>
     </div>
 </template>
 

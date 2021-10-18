@@ -7,7 +7,9 @@
                v-model="newTodoItem"
                v-on:keyup.enter="addTodoItem"
         />
-        <button class="add_button" v-on:click="addTodoItem">add</button>
+        <b-button pill variant="primary"
+                  class="add_button"
+                  v-on:click="addTodoItem">add</b-button>
     </div>
 </template>
 
